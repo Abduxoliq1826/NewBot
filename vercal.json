@@ -1,0 +1,13 @@
+{
+    "builds": [{
+      "src": "ReseptionsBot/wsgi.py",
+      "use": "@vercal/python",
+      "config": {"maxlambdaSize": "15mb", "runtime", "python3.11"}
+    }],
+  "routers": [
+    {
+        "src": "/(.*)",
+        "dest": "ReseptionsBot/wsgi.py",
+    }
+  ]
+}
